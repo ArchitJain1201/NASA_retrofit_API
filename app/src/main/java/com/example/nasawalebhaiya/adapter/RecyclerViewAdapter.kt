@@ -22,10 +22,10 @@ class RecyclerViewAdapter: RecyclerView.Adapter<RecyclerViewAdapter.MyViewHolder
         val tvTitle = view.findViewById<TextView>(R.id.tvTitle)
         val tvDesc = view.findViewById<TextView>(R.id.tvDesc)
         fun bind(data: RecyclerData){
-            tvTitle.text = data.earth_date.toString()
-            tvDesc.text = data.rover.toString()
+            tvTitle.text = data.photo.camera.full_name
+            tvDesc.text = data.photo.rover.name
 
-            val url  = data.img_src
+            val url  = data.photo.img_src
 
             Picasso.get().load(url).into(imageThumb)
 
