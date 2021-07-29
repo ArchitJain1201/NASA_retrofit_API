@@ -13,7 +13,7 @@ import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.nasawalebhaiya.adapter.RecyclerViewAdapter
-import com.example.nasawalebhaiya.models.RecyclerList
+import com.example.nasawalebhaiya.models.RecyclerData
 import com.example.nasawalebhaiya.viewModel.MainActivityViewModel
 
 /**
@@ -40,9 +40,9 @@ class RecyclerListFragment : Fragment() {
     @SuppressLint("FragmentLiveDataObserve")
     private fun initViewModel(){
         val viewModel = ViewModelProvider(this).get(MainActivityViewModel::class.java)
-        viewModel.getRecyclerListObserver().observe(this, Observer<RecyclerList> {
+        viewModel.getRecyclerListObserver().observe(this, Observer<RecyclerData> {
             if(it!=null){
-                recyclerAdapter.setUpdateData(it.items)
+                recyclerAdapter.setUpdateData(it.photos)
             }else{
                 Toast.makeText(activity, "Error in getting data", Toast.LENGTH_SHORT).show()
             }
