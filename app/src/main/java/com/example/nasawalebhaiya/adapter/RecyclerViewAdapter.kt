@@ -7,14 +7,15 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.nasawalebhaiya.R
+import com.example.nasawalebhaiya.models.NASA
 import com.example.nasawalebhaiya.models.Photos
 import com.example.nasawalebhaiya.models.RecyclerData
 
 import com.squareup.picasso.Picasso
 
 class RecyclerViewAdapter: RecyclerView.Adapter<RecyclerViewAdapter.MyViewHolder>() {
-    var items = ArrayList<Photos>()
-    fun setUpdateData(items: ArrayList<Photos>){
+    var items = listOf<NASA>()
+    fun setUpdateData(items: List<NASA>){
         this.items =items
         notifyDataSetChanged()
     }
@@ -22,11 +23,11 @@ class RecyclerViewAdapter: RecyclerView.Adapter<RecyclerViewAdapter.MyViewHolder
         val imageThumb = view.findViewById<ImageView>(R.id.imagethumb)
         val tvTitle = view.findViewById<TextView>(R.id.tvTitle)
         val tvDesc = view.findViewById<TextView>(R.id.tvDesc)
-        fun bind(data: Photos){
-            tvTitle.text = data.rover.name
-            tvDesc.text = data.camera.full_name
+        fun bind(data: NASA){
+            tvTitle.text = data.cameraName
+            tvDesc.text = data.roverName
 
-            val url  = data.img_src
+            val url  = data.imgSrc
 
             Picasso.get().load(url).into(imageThumb)
 

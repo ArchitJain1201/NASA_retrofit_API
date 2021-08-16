@@ -3,7 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/r2030/OneDrive/Desktop/PROGRAMMING/ANDROID_STUDIO/NASAWaleBhaiya/app/src/main/res/layout/activity_main.xml" value="0.2" />
         <entry key="..\:/Users/r2030/OneDrive/Desktop/PROGRAMMING/ANDROID_STUDIO/NASAWaleBhaiya/app/src/main/res/layout/fragment_recycler_list.xml" value="0.1796875" />
+        <entry key="..\:/Users/r2030/OneDrive/Desktop/PROGRAMMING/ANDROID_STUDIO/NASAWaleBhaiya/app/src/main/res/layout/fragment_saved_data.xml" value="0.2" />
         <entry key="..\:/Users/r2030/OneDrive/Desktop/PROGRAMMING/ANDROID_STUDIO/NASAWaleBhaiya/app/src/main/res/layout/recycler_list_row.xml" value="0.1" />
       </map>
     </option>
